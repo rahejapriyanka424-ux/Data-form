@@ -26,79 +26,86 @@
 <div class="form-container">
 <h4 class="text-center mb-4">Form Submission to Google Sheet</h4>
 <form id="submit-to-google-sheet">
-<!-- Name -->
-<div class="form-group">
-<label for="name">Name:</label>
-<input
-  class="form-control"
-  type="text"
-  name="name"
-  id="name"
-  placeholder="Name"
-  pattern="^[A-Za-z\s]+$"
-  title="Only alphabets allowed"
-  required
-/>
-</div>
+  
+  <!-- Name -->
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input
+      class="form-control"
+      type="text"
+      name="name"
+      id="name"
+      placeholder="Name"
+      pattern="^[A-Za-z\s]+$"
+      title="Only alphabets allowed"
+      required
+    />
+  </div>
  
-<!-- Phone -->
-<div class="form-group">
-<label for="phone">Phone:</label>
-<input
-  class="form-control"
-  type="tel"
-  name="phone"
-  id="phone"
-  placeholder="+92XXXXXXXXXX"
-  pattern="^\+?[0-9]{10,15}$"
-  title="Only numbers allowed, 10–15 digits (optional + at start)"
-  required
-/>
-<small class="form-text text-muted">Enter valid phone (10–15 digits, e.g. +923001234567)</small>
-</div>
+  <!-- Phone -->
+  <div class="form-group">
+    <label for="phone">Phone:</label>
+    <input
+      class="form-control"
+      type="tel"
+      name="phone"
+      id="phone"
+      placeholder="+92XXXXXXXXXX"
+      pattern="^\+?[0-9]{10,15}$"
+      minlength="10"
+      maxlength="15"
+      title="Only numbers allowed, 10–15 digits (optional + at start)"
+      required
+    />
+    <small class="form-text text-muted">
+      Enter valid phone (10–15 digits, e.g. +923001234567)
+    </small>
+  </div>
  
-<!-- City -->
-<div class="form-group">
-<label for="city">City:</label>
-<input
-  class="form-control"
-  type="text"
-  name="city"
-  id="city"
-  placeholder="City"
-  required
-/>
-</div>
+  <!-- City -->
+  <div class="form-group">
+    <label for="city">City:</label>
+    <input
+      class="form-control"
+      type="text"
+      name="city"
+      id="city"
+      placeholder="City"
+      required
+    />
+  </div>
  
-<!-- Destination Dropdown -->
-<div class="form-group">
-<label for="destination">Destination:</label>
-<select class="form-control" name="destination" id="destination" required>
-  <option value="">-- Select Destination --</option>
-  <option value="Dubai">Dubai</option>
-  <option value="Qatar">Qatar</option>
-  <option value="Saudi Arabia">Saudi Arabia</option>
-  <option value="UK">UK</option>
-  <option value="USA">USA</option>
-</select>
-</div>
+  <!-- Destination Dropdown -->
+  <div class="form-group">
+    <label for="destination">Destination:</label>
+    <select class="form-control" name="destination" id="destination" required>
+      <option value="">-- Select Destination --</option>
+      <option value="Dubai">Dubai</option>
+      <option value="Qatar">Qatar</option>
+      <option value="Saudi Arabia">Saudi Arabia</option>
+      <option value="UK">UK</option>
+      <option value="USA">USA</option>
+    </select>
+  </div>
  
-<!-- Resume Upload -->
-<div class="form-group">
-<label for="resume">Upload Resume (Max 5MB):</label>
-<input
-  class="form-control"
-  type="file"
-  name="resume"
-  id="resume"
-  accept=".pdf,.doc,.docx"
-  required
-/>
-<small class="form-text text-muted">Allowed formats: PDF, DOC, DOCX. Max size: 5 MB</small>
-</div>
+  <!-- Resume Upload -->
+  <div class="form-group">
+    <label for="resume">Upload Resume (Max 5MB):</label>
+    <input
+      class="form-control"
+      type="file"
+      name="resume"
+      id="resume"
+      accept=".pdf,.doc,.docx"
+      required
+    />
+    <small class="form-text text-muted">
+      Allowed formats: PDF, DOC, DOCX. Max size: 5 MB
+    </small>
+  </div>
  
-<!-- Submit Button -->
-<button type="submit" class="btn btn-primary btn-block">Submit</button>
+  <!-- Submit Button -->
+  <button type="submit" class="btn btn-primary btn-block">Submit</button>
 </form>
 </div>
 </div>
